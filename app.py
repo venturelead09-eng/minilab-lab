@@ -97,7 +97,7 @@ class MiniLM(nn.Module):
 @st.cache_resource
 def load_model():
     checkpoint = torch.load(
-        "minilm.pt", map_location=DEVICE, weights_only=True
+        "minilm_v2.pt", map_location=DEVICE, weights_only=True
     )
     chars = checkpoint["chars"]
     config = checkpoint["config"]
